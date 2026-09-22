@@ -13,6 +13,12 @@ public class Ball : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        AddStartingForce();
+    }
+
+
     public void ResetBall()
     {
         _rigidBody.linearVelocity = Vector2.zero;
