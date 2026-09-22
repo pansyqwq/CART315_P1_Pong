@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 
-public class Paddle : MonoBehaviour
+public class PaddleR : MonoBehaviour
 {
     private Rigidbody2D _rigidBody;
 
@@ -28,24 +26,20 @@ public class Paddle : MonoBehaviour
 
     private void Update()
     {
-        // W = move up
-        if (Keyboard.current.wKey.isPressed)
+        if (Keyboard.current.upArrowKey.isPressed)
         {
             direction = Vector2.up;
         }
-        // S = move down
-        else if (Keyboard.current.sKey.isPressed)
+        else if (Keyboard.current.downArrowKey.isPressed)
         {
             direction = Vector2.down;
         }
-        // Neither key = stop applying force
         else
         {
             direction = Vector2.zero;
         }
     }
 
-    // FixedUpdate is called once per physics update
     private void FixedUpdate()
     {
         if (direction.sqrMagnitude == 0) return;

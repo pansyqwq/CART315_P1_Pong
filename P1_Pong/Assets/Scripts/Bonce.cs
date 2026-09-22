@@ -16,6 +16,16 @@ public class CourtBottom : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody2D>();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Ball ball = collision.gameObject.GetComponent<Ball>();
+
+        if (ball != null)
+        {
+            ball.BounceY();
+        }
+    }
+
     // FixedUpdate is called once per physics update
     private void FixedUpdate()
     {

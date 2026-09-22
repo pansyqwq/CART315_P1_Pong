@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     private Rigidbody2D _rigidBody;
 
     public float speed = 100.0f;
+    public float bounceStrength = 1.2f;
 
     private void Awake()
     {
@@ -19,6 +20,15 @@ public class Ball : MonoBehaviour
     }
 
 
+    public void BounceY()
+    {
+        Vector2 velocity = _rigidBody.linearVelocity;
+
+        velocity.y = -velocity.y * bounceStrength;
+
+        _rigidBody.linearVelocity = velocity;
+    }
+
     public void ResetBall()
     {
         _rigidBody.linearVelocity = Vector2.zero;
@@ -28,8 +38,9 @@ public class Ball : MonoBehaviour
 
     public void AddStartingForce()
     {
-        float x = Random.value < 0.5f ? -1.0f : 1.0f;
-        float y = (Random.value < 0.5f ? -1.0f : 1.0f) * Random.Range(0.5f, 0.9f);
+        float x = -1.0f;//only going to the left
+
+        float y = (Random.value < 0.5f ? -1.0f : 1.0f) * Random.Range(0.5f, 0.9f); //50% up or down
 
         Vector2 direction = new Vector2(x, y);
 
