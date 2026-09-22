@@ -11,6 +11,8 @@ public class Paddle : MonoBehaviour
 
     public Vector2 direction;
 
+    public GameManager gameManager;//get data from game manager
+
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
@@ -23,6 +25,7 @@ public class Paddle : MonoBehaviour
         if (ball != null)
         {
             ball.BounceY();
+            gameManager.PaddleHit();
         }
     }
 

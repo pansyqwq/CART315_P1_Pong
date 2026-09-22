@@ -9,6 +9,8 @@ public class PaddleR : MonoBehaviour
 
     public Vector2 direction;
 
+    public GameManager gameManager;
+
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
@@ -21,6 +23,7 @@ public class PaddleR : MonoBehaviour
         if (ball != null)
         {
             ball.BounceY();
+            gameManager.PaddleHit();
         }
     }
 

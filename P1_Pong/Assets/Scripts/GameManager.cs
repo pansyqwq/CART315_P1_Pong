@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -18,9 +17,17 @@ public class GameManager : MonoBehaviour
         ball.AddStartingForce();
     }
 
+    // Ball hits a paddle
+    public void PaddleHit()
+    {
+        score.IncreaseScore();
+    }
+
+    // Ball leaves the court
     public void CourtTriggered(int courtId)
     {
-        score.IncreaseScore((courtId == 0 ? 1 : 0)); //If left court was triggered, right player scores & vice versa
+        Debug.Log("Court triggered!");
+
         StartRound();
     }
 }

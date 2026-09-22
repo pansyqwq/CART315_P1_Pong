@@ -3,37 +3,25 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public int scorePlayerOne;
-    public int scorePlayerTwo;
+    public int score = 0;
 
-    public TextMeshProUGUI scorePlayerOneText;
-    public TextMeshProUGUI scorePlayerTwoText;
-    
-    public void IncreaseScore(int playerId)
+    public TextMeshProUGUI scoreText;
+
+    public void IncreaseScore()
     {
-        switch (playerId)
-        {
-            case 0:
-                scorePlayerOne++;
-                break;
-            case 1:
-                scorePlayerTwo++;
-                break;
-        }
-        
+        score++;
+        Debug.Log("Score is now: " + score);
         UpdateScore();
     }
 
     public void ResetScore()
     {
-        scorePlayerOne = 0;
-        scorePlayerTwo = 0;
+        score = 0;
+        UpdateScore();
     }
 
-    // Update is called once per frame
-    void UpdateScore()
+    private void UpdateScore()
     {
-        scorePlayerOneText.text = scorePlayerOne.ToString();
-        scorePlayerTwoText.text = scorePlayerTwo.ToString();
+        scoreText.text = score.ToString();
     }
 }
