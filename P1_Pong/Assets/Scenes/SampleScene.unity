@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5f601258e4040d99bf8f0aab3734c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 60
+  speed: 50
   direction: {x: 0, y: 0}
   gameManager: {fileID: 665852613}
 --- !u!1001 &144755094
@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6362156067429870151, guid: 9434e6879fee7ee4cb89888ca95eaa9c, type: 3}
       propertyPath: speed
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6362156067429870151, guid: 9434e6879fee7ee4cb89888ca95eaa9c, type: 3}
       propertyPath: gameManager
@@ -633,7 +633,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   score: {fileID: 427912242}
   ball: {fileID: 572424246}
-  gameState: 0
+  gameState: 2
 --- !u!4 &665852614
 Transform:
   m_ObjectHideFlags: 0
@@ -1041,9 +1041,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3994025990862235034, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5369804536354729895, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: m_Name
       value: CourtRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529284837106475044, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 665852613}
+    - target: {fileID: 5529284837106475044, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
+      propertyPath: courtTrigger.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529284837106475044, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
+      propertyPath: courtTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5943162963695837566, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1420,10 +1436,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3994025990862235034, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5369804536354729895, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: m_Name
       value: CourtLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 5529284837106475044, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 665852613}
     - target: {fileID: 5943162963695837566, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.64
