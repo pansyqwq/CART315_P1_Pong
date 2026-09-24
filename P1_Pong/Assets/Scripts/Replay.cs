@@ -5,8 +5,10 @@ public class Replay : MonoBehaviour
 {
     public void ReplayGame()
     {
-        Debug.Log("Replay button clicked!");
+      
+        Score.finalScore = 0;
 
         SceneManager.LoadScene("SampleScene");
+        Debug.Log("Replay button clicked!");
     }
 }

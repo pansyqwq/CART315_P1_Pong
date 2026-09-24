@@ -1043,12 +1043,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3994025990862235034, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5369804536354729895, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: m_Name
       value: CourtRight
       objectReference: {fileID: 0}
+    - target: {fileID: 5529284837106475044, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 427912242}
     - target: {fileID: 5529284837106475044, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: gameManager
       value: 
@@ -1438,12 +1442,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3994025990862235034, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5369804536354729895, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: m_Name
       value: CourtLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 5529284837106475044, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 427912242}
     - target: {fileID: 5529284837106475044, guid: 77d322fba28899d49a5dbcc9acc58481, type: 3}
       propertyPath: gameManager
       value: 

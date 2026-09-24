@@ -5,12 +5,13 @@ public class Score : MonoBehaviour
 {
     public int score = 0;
 
+    public static int finalScore;
+
     public TextMeshProUGUI scoreText;
 
     public void IncreaseScore()
     {
         score++;
-        Debug.Log("Score is now: " + score);
         UpdateScore();
     }
 
@@ -18,6 +19,11 @@ public class Score : MonoBehaviour
     {
         score = 0;
         UpdateScore();
+    }
+
+    public void SaveFinalScore()
+    {
+        finalScore = score;
     }
 
     private void UpdateScore()
